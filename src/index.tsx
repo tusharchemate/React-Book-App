@@ -1,19 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import { StrictMode } from "react";
+import { Provider } from "react-redux";
+import store from "./store/index";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AddBooks from "./components/AddBook";
+import BookContainer from "./container/BookContainer";
+import ViewBook from "./components/ViewBook";
+const rootElement = document.getElementById("root");
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+// New as of React v18.x
+const root = createRoot(rootElement!);
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<BookContainer />} />
+          <Route path="/addBook" element={<AddBooks />} />
+          <Route path="/edit/:id" element={<AddBooks />} />
+          <Route path="/view/:id" element={<ViewBook />} />
+        </Routes>
+        <App />
+      </Router>
+    </Provider>
+  </StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

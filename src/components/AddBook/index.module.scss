@@ -1,0 +1,36 @@
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .input {
+      height: 45px;
+      width: 350px;
+      border-radius: 5px;
+      border: 1px solid lightgrey;
+      margin-top: 30px;
+      outline: none;
+    }
+
+    .errorText {
+      display: flex;
+      justify-content: start;
+      align-items: self-start;
+      color: rgb(250, 107, 107);
+    }
+    .button {
+      margin-top: 30px;
+      background-color: #ffffff;
+      font-size: 14px;
+      height: 40px;
+      width: 350px;
+      padding: 4px 15px;
+      border-radius: 5px;
+      outline: none;
+    }
+  }
+}

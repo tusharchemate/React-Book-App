@@ -1,0 +1,24 @@
+h1 {
+  color: rgb(143 149 149);
+}
+
+h3 {
+  color: yellowgreen;
+}
+
+.dev {
+  color: orange;
+}
+
+.prod {
+  color: rgb(59, 218, 117);
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: #eff2f5;
+}

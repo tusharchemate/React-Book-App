@@ -1,0 +1,34 @@
+.viewContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  .card {
+    border-radius: 7px;
+    background-color: #eff3f3;
+    width: 550px;
+    height: auto;
+
+    .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+      padding: 10px;
+    }
+  }
+  .cardBody {
+    display: grid;
+    padding: 10px 2px 10px 5px;
+    grid-gap: 10px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin: 10px;
+  }
+
+  .cardFooter {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    padding: 10px;
+  }
+}
